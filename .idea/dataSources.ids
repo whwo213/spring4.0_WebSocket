@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Oracle - @bananablue.iptime.org" uuid="59dd2d0c-0fc6-4d5e-89f6-d3c9d523030e">
+    <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production&#xa;With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0">
+      <extra-name-characters>$#</extra-name-characters>
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="ORACLE" format-version="2.5">
+      <schema id="1" name="C##APPLE6268">
+        <object-id>102</object-id>
+        <created-timestamp>2016-06-19.02:59:05</created-timestamp>
+        <modified-timestamp>2016-06-25.18:51:28</modified-timestamp>
+        <introspection-timestamp>2016-06-25.19:27:19</introspection-timestamp>
+      </schema>
+      <sequence id="2" parent="1" name="USER_SEQ">
+        <object-id>91993</object-id>
+        <created-timestamp>2016-06-19.03:01:17</created-timestamp>
+        <modified-timestamp>2016-06-19.03:01:17</modified-timestamp>
+        <max-value>999999</max-value>
+        <increment-by>1</increment-by>
+        <next-value>48</next-value>
+        <ordered>1</ordered>
+        <cache-size>-2147483648</cache-size>
+      </sequence>
+      <sequence id="3" parent="1" name="VACATION_SEQ">
+        <object-id>92612</object-id>
+        <created-timestamp>2016-06-25.01:25:53</created-timestamp>
+        <modified-timestamp>2016-06-25.01:25:53</modified-timestamp>
+        <max-value>99999999</max-value>
+        <increment-by>1</increment-by>
+        <next-value>1</next-value>
+        <ordered>1</ordered>
+        <cache-size>-2147483648</cache-size>
+      </sequence>
+      <table id="4" parent="1" name="USER_ROLES">
+        <object-id>91994</object-id>
+        <created-timestamp>2016-06-19.04:22:03</created-timestamp>
+        <modified-timestamp>2016-06-21.02:30:16</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="5" parent="1" name="USERS">
+        <object-id>91991</object-id>
+        <created-timestamp>2016-06-19.02:59:05</created-timestamp>
+        <modified-timestamp>2016-06-22.22:32:50</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <table id="6" parent="1" name="VACATION">
+        <object-id>92610</object-id>
+        <created-timestamp>2016-06-25.01:23:11</created-timestamp>
+        <modified-timestamp>2016-06-25.18:51:28</modified-timestamp>
+        <organization>HEAP</organization>
+      </table>
+      <column id="7" parent="4" name="EMAIL">
+        <data-type>VARCHAR2(50)</data-type>
+      </column>
+      <column id="8" parent="4" name="ROLE">
+        <data-type>VARCHAR2(100)</data-type>
+      </column>
+      <column id="9" parent="5" name="IDX">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(*)</data-type>
+      </column>
+      <column id="10" parent="5" name="USERNAME">
+        <data-type>VARCHAR2(50)</data-type>
+      </column>
+      <column id="11" parent="5" name="PASSWORD">
+        <data-type>VARCHAR2(100)</data-type>
+      </column>
+      <column id="12" parent="5" name="ENABLE">
+        <data-type>NUMBER(*)</data-type>
+        <default-expression>1</default-expression>
+      </column>
+      <column id="13" parent="5" name="EMAIL">
+        <data-type>VARCHAR2(100)</data-type>
+      </column>
+      <column id="14" parent="5" name="PHONE">
+        <data-type>VARCHAR2(100)</data-type>
+      </column>
+      <column id="15" parent="5" name="RANK">
+        <data-type>VARCHAR2(10)</data-type>
+      </column>
+      <column id="16" parent="5" name="REGDATE">
+        <data-type>DATE</data-type>
+      </column>
+      <index id="17" parent="5" name="USERS_PK">
+        <object-id>91992</object-id>
+        <created-timestamp>2016-06-19.02:59:05</created-timestamp>
+        <modified-timestamp>2016-06-19.02:59:05</modified-timestamp>
+        <columns>IDX</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="18" parent="5" name="USERS_PK">
+        <modified-timestamp>2016-06-19.02:59:05</modified-timestamp>
+        <columns>IDX</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>USERS_PK</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="19" parent="6" name="IDX">
+        <mandatory>1</mandatory>
+        <data-type>NUMBER(*)</data-type>
+      </column>
+      <column id="20" parent="6" name="VACATION_MEMO">
+        <data-type>VARCHAR2(500)</data-type>
+      </column>
+      <column id="21" parent="6" name="VACATION_DATE">
+        <data-type>DATE</data-type>
+      </column>
+      <column id="22" parent="6" name="TMP1">
+        <data-type>VARCHAR2(500)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="23" parent="6" name="TMP2">
+        <data-type>VARCHAR2(500)</data-type>
+      </column>
+      <column id="24" parent="6" name="VACATION_USER_NAME">
+        <data-type>VARCHAR2(50)</data-type>
+      </column>
+      <column id="25" parent="6" name="PARENT_IDX">
+        <data-type>NUMBER(*)</data-type>
+      </column>
+      <index id="26" parent="6" name="SYS_C0010029">
+        <name-surrogate>1</name-surrogate>
+        <object-id>92611</object-id>
+        <created-timestamp>2016-06-25.01:23:11</created-timestamp>
+        <modified-timestamp>2016-06-25.01:23:11</modified-timestamp>
+        <columns>IDX</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+        <tablespace-name>USERS</tablespace-name>
+      </index>
+      <key id="27" parent="6" name="SYS_C0010029">
+        <name-surrogate>1</name-surrogate>
+        <modified-timestamp>2016-06-25.01:23:11</modified-timestamp>
+        <columns>IDX</columns>
+        <initially-deferred>1</initially-deferred>
+        <underlying-index>SYS_C0010029</underlying-index>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
